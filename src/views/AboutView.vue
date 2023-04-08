@@ -1,6 +1,28 @@
 <template>
-  <div class="about">
-    <h1>你好 你进入的about页面</h1>
-    <h1>不好 你进干什么 狗吧</h1>
+  <div>
+    <h1>{{ store.state.name }}</h1>
   </div>
 </template>
+
+<script>
+import { ref, reactive, toRefs } from 'vue';
+import { useStore } from 'vuex';
+import { useRoute, useRouter } from 'vue-router';
+export default {
+  setup() {
+    const store = useStore();
+    const router = useRouter();
+    const route = useRoute();
+    const data = reactive({});
+    return {
+      store,
+      router,
+      route,
+      ...toRefs(data)
+    };
+  },
+  components: {}
+};
+</script>
+
+<style></style>

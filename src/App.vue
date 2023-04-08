@@ -2,6 +2,7 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    {{ $store.state.name }}
   </nav>
   <p>111</p>
   <p>222</p>
