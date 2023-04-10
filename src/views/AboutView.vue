@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>{{ store.state.name }}</h1>
+    <div class="px-4 bg-blue-500">hao</div>
   </div>
 </template>
 

@@ -1,6 +1,9 @@
 const { defineConfig } = require('@vue/cli-service');
+const WindiCSSWebpackPlugin = require('windicss-webpack-plugin');
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: '/'
-  // useEslin: false
+  publicPath: '/',
+  configureWebpack: {
+    plugins: [new WindiCSSWebpackPlugin()]
+  }
 });
